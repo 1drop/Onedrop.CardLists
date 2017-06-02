@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers"
+      xmlns:neos="http://typo3.org/ns/Neos/Neos/ViewHelpers">
+<f:section name="Main">
+    <div class="card-list">
+        <div class="container">
+            <div class="title-bar">
+                <div class="title-bar--left">
+                    <h1>{listTitle -> f:format.raw()}</h1>
+                </div>
+                <div class="title-bar--right">
+                    <div class="filter-list" id="filter-list">
+                        <div class="filter-list--select filter-icon-angle-down">
+                            <select id="filter-select-category">
+                                <option>{categoryTitle -> f:format.raw()}</option>
+                                <option class="d-none">{removeFilter -> f:format.raw()}</option>
+                            </select>
+                        </div>
+                        <div class="filter-list--select filter-icon-angle-down">
+                            <select id="filter-select-year">
+                                <option>{yearTitle -> f:format.raw()}</option>
+                                <option class="d-none">{removeFilter -> f:format.raw()}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="btn grid-btn active" id="grid-btn"><i class="filter-icon-grid"></i></div>
+                    <div class="btn list-btn" id="list-btn"><i class="filter-icon-list"></i></div>
+                </div>
+            </div>
+            <f:if condition="{neos:rendering.inBackend()} && {neos:rendering.inEditMode()}">
+                <div class="filter-config alert alert-info">
+                    <h2>Categories (only visible in backend):</h2>
+                    <div class="filter-config--list">
+                        {categories -> f:format.raw()}
+                    </div>
+                    <h2>Groups (only visible in backend:</h2>
+                    <div class="filter-config--list">
+                        {groups -> f:format.raw()}
+                    </div>
+                </div>
+            </f:if>
+            <div id="grid-view" class="grid">
+                {cards -> f:format.raw()}
+            </div>
+            <div id="list-view" class="list d-none">
+            </div>
+        </div>
+        <script type="text/javascript">
+            var projectsList = {json -> f:format.raw()};
+        </script>
+    </div>
+</f:section>
+</html>

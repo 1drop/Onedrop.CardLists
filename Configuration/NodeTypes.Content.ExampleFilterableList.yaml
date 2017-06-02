@@ -1,0 +1,12 @@
+'Onedrop.CardLists:ExampleFilterableList':
+  superTypes:
+    'Onedrop.CardLists:FilterableList': true
+  ui:
+    label: i18n
+  childNodes:
+    cards:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Onedrop.CardLists:ExampleFilterableCard': true

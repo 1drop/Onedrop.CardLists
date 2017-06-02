@@ -1,0 +1,30 @@
+---
+'Onedrop.CardLists:FilterableCard':
+  abstract: true
+  superTypes:
+    'Onedrop.CardLists:Card': true
+  ui:
+    position: 10
+    inspector:
+      groups:
+        listing:
+          label: i18n
+          icon: 'icon-bookmark'
+          position: 10
+  properties:
+    category:
+      type: reference
+      ui:
+        label: i18n
+        inspector:
+          group: 'listing'
+          editorOptions:
+            nodeTypes: ['Onedrop.CardLists:Category']
+    group:
+      type: reference
+      ui:
+        label: i18n
+        inspector:
+          group: 'listing'
+          editorOptions:
+            nodeTypes: ['Onedrop.CardLists:Group']

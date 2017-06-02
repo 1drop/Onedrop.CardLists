@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-package",
+    "name": "onedrop/cardlists",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Onedrop\\CardLists\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Onedrop.CardLists"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+prototype(Onedrop.CardLists:ExampleFilterableList) < prototype(Onedrop.CardLists:FilterableList) {
+    sectionName = 'Main'
+    templatePath = 'resource://Onedrop.CardLists/Private/Templates/NodeTypes/ExampleFilterableList.html'
+    locale = ${node.context.dimensions.language[0]}
+
+    json = Neos.Fusion:RawCollection {
+        collection = ${q(node).children('cards').children('[instanceof Onedrop.CardLists:Card]')}
+        itemName = 'listItem'
+        itemRenderer = Neos.Fusion:RawArray {
+            id = ${listItem.identifier}
+            category = ${q(q(listItem).property('category')).property('name')}
+            group = ${q(q(listItem).property('group')).property('name')}
+            year = ${q(listItem).property('year')}
+            name = ${q(listItem).property('name')}
+        }
+        @process.json = ${Json.stringify(value)}
+    }
+
+    listTitle = ${Translation.translate('exampleListTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
+    categoryTitle = ${Translation.translate('categoryTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
+    yearTitle = ${Translation.translate('yearTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
+    removeFilter = ${Translation.translate('removeFilter', null, [], 'Templates/List', 'Onedrop.CardLists')}
+}

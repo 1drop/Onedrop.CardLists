@@ -1,0 +1,7 @@
+prototype(Onedrop.CardLists:ExampleList) < prototype(Onedrop.CardLists:List) {
+    sectionName = 'Main'
+    templatePath = 'resource://Onedrop.CardLists/Private/Templates/NodeTypes/ExampleList.html'
+    locale = ${node.context.dimensions.language[0]}
+
+    listTitle = ${Translation.translate('exampleListTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
+}

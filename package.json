@@ -1,0 +1,39 @@
+{
+  "name": "onedrop-neos",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-env": "^1.4.0",
+    "browser-sync": "^2.16.0",
+    "cssnano": "^3.7.5",
+    "eslint": "^3.19.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-debug": "^3.0.0",
+    "gulp-eslint": "^3.0.1",
+    "gulp-filter": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-main-bower-files": "^1.5.3",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylelint": "^3.9.0",
+    "gulp-uglify": "^2.0.0",
+    "pixrem": "^3.0.2",
+    "stylelint-declaration-use-variable": "^1.6.0",
+    "stylelint-scss": "^1.4.3"
+  },
+  "dependencies": {}
+}

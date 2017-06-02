@@ -1,0 +1,14 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          'Onedrop.CardLists': ['NodeTypes/*']
+    fusion:
+      autoInclude:
+        'Onedrop.CardLists': true
+  Flow:
+    mvc:
+      routes:
+        'Onedrop.CardLists':
+          position: 'start'

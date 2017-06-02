@@ -1,0 +1,16 @@
+'Onedrop.CardLists:List':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    icon: 'icon-th-large'
+    position: 40
+    inlineEditable: true
+  properties:
+    title:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Title'

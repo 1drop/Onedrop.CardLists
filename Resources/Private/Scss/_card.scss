@@ -1,0 +1,80 @@
+.card-list {
+    .card,
+    .sliding-card {
+        position: relative;
+        background: $filter-color;
+        font-size: 15px;
+
+        &--image {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &--header-text {
+            padding: 15px 30px 15px 0;
+
+            h3 {
+                font-size: 18px;
+                line-height: 1.5;
+                min-height: 50px;
+            }
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &--body {
+            padding: 15px;
+
+            .btn {
+                margin-top: 25px;
+            }
+
+            h4 {
+                font-size: 16px;
+            }
+        }
+
+        &--dropdown-btn {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            $arrow-size: 8px;
+
+            i {
+                display: flex;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) {
+    .card-list {
+        .card {
+            &--header-text {
+                h3 {
+                    min-height: 35px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .card-list {
+        .card {
+            &--header-text {
+                padding-left: 30px;
+            }
+        }
+    }
+}

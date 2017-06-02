@@ -1,0 +1,13 @@
+prototype(Onedrop.CardLists:ExampleCard) < prototype(Neos.Neos:Content) {
+    sectionName = 'Main'
+    templatePath = 'resource://Onedrop.CardLists/Private/Templates/NodeTypes/ExampleCard.html'
+    locale = ${node.context.dimensions.language[0]}
+
+    image = Neos.NodeTypes:Image {
+        @context.node = ${node}
+        maximumWidth = 512
+        maximumHeight = 512
+    }
+
+    id = ${node.identifier}
+}

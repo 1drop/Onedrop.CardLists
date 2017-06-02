@@ -1,0 +1,7 @@
+prototype(Onedrop.CardLists:List) < prototype(Neos.Neos:Content) {
+    locale = ${node.context.dimensions.language[0]}
+
+    cards = Neos.Neos:ContentCollection {
+        nodePath = 'cards'
+    }
+}

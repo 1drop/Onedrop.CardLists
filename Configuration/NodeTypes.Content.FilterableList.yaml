@@ -1,0 +1,19 @@
+'Onedrop.CardLists:FilterableList':
+  abstract: true
+  superTypes:
+    'Onedrop.CardLists:List': true
+  ui:
+    label: i18n
+  childNodes:
+    categories:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Onedrop.CardLists:Category': true
+    groups:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Onedrop.CardLists:Group': true

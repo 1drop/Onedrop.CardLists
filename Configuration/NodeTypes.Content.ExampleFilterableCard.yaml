@@ -1,0 +1,20 @@
+'Onedrop.CardLists:ExampleFilterableCard':
+  superTypes:
+    'Onedrop.CardLists:FilterableCard': true
+  ui:
+    label: i18n
+  properties:
+    year:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Year'
+    bodyText:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Body text'

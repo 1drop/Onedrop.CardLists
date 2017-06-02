@@ -1,0 +1,19 @@
+prototype(Onedrop.CardLists:ExampleFilterableCard) < prototype(Neos.Neos:Content) {
+    sectionName = 'Main'
+    templatePath = 'resource://Onedrop.CardLists/Private/Templates/NodeTypes/ExampleFilterableCard.html'
+    locale = ${node.context.dimensions.language[0]}
+
+    image = Neos.NodeTypes:Image {
+    @context.node = ${node}
+    maximumWidth = 512
+    maximumHeight = 512
+    }
+
+    id = ${node.identifier}
+
+    properties = Neos.Neos:ContentCollection {
+        nodePath = 'properties'
+    }
+
+    yearTitle = ${Translation.translate('yearTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
+}

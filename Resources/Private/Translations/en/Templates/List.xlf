@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Onedrop.CardLists" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="exampleListTitle" xml:space="preserve">
+                <source>List</source>
+            </trans-unit>
+            <trans-unit id="categoryTitle" xml:space="preserve">
+                <source>Category</source>
+            </trans-unit>
+            <trans-unit id="yearTitle" xml:space="preserve">
+                <source>Year</source>
+            </trans-unit>
+            <trans-unit id="removeFilter" xml:space="preserve">
+                <source>Delete</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

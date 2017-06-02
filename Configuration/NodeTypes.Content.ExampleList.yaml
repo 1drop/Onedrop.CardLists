@@ -1,0 +1,13 @@
+'Onedrop.CardLists:ExampleList':
+  superTypes:
+    'Onedrop.CardLists:List': true
+  ui:
+    label: i18n
+  childNodes:
+    cards:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Onedrop.CardLists:ExampleCard': true
+          'Neos.NodeTypes:Headline': true

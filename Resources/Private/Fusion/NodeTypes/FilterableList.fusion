@@ -1,0 +1,15 @@
+prototype(Onedrop.CardLists:FilterableList) < prototype(Onedrop.CardLists:List) {
+    locale = ${node.context.dimensions.language[0]}
+
+    cards = Neos.Neos:ContentCollection {
+        nodePath = 'cards'
+    }
+
+    categories = Neos.Neos:ContentCollection {
+        nodePath = 'categories'
+    }
+
+    groups = Neos.Neos:ContentCollection {
+        nodePath = 'groups'
+    }
+}

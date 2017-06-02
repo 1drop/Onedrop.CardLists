@@ -1,0 +1,17 @@
+{
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-var": "error",
+        "quotes": ["error", "single"],
+        "no-alert": "error"
+    },
+    "env": {
+        "browser": true,
+        "jquery": true
+    }
+}

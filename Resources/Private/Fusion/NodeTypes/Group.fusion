@@ -1,0 +1,5 @@
+prototype(Onedrop.CardLists:Group) < prototype(Neos.Neos:Content) {
+    sectionName = 'Main'
+    templatePath = 'resource://Onedrop.CardLists/Private/Templates/NodeTypes/Category.html'
+    locale = ${node.context.dimensions.language[0]}
+}

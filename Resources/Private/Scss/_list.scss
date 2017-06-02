@@ -1,0 +1,221 @@
+.card-list {
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .title-bar {
+        background: $filter-color;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        &--left {
+            height: 60px;
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+
+            h1 {
+                text-transform: uppercase;
+                margin-bottom: 0;
+            }
+        }
+
+        &--right {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .btn {
+            background: $filter-color-light;
+            cursor: pointer;
+            margin-right: 10px;
+            padding: 10px 16px;
+
+            &.active,
+            &:hover {
+                color: $filter-color-light;
+                background: $filter-color-dark;
+            }
+
+            i {
+                vertical-align: middle;
+            }
+        }
+
+        .filter-list {
+            display: flex;
+            margin-right: 5px;
+
+            &--select {
+                display: inline-block;
+                margin-right: 10px;
+                width: 120px;
+                overflow: hidden;
+                background: $filter-color-light;
+                color: $filter-color-dark;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                &:hover {
+                    background: $filter-color;
+                }
+
+                select {
+                    padding: 9px 8px;
+                    width: 130%;
+                    border: none;
+                    box-shadow: none;
+                    background: transparent;
+                    background-image: none;
+                    -webkit-appearance: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .filter-config {
+        margin-bottom: 40px;
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        &--list {
+            min-height: 30px;
+
+            + h2 {
+                margin-top: 20px;
+            }
+        }
+
+        &--category {
+            background: #FFFFFF;
+            min-height: 20px;
+            min-width: 80px;
+            padding: 10px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            display: inline-block;
+        }
+    }
+
+    .grid {
+        > .neos-contentcollection {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+
+            > .neos-empty-contentcollection-overlay {
+                width: 100%;
+            }
+        }
+
+        .card--wrapper,
+        .sliding-card--wrapper {
+            position: relative;
+            flex: 0 0 50%;
+            max-width: 50%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-bottom: 40px;
+        }
+
+        .neos-nodetypes-headline {
+            padding: 0 15px 20px;
+            width: 100%;
+        }
+    }
+
+    .list {
+        .list-item {
+            padding: 5px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &--name {
+                position: relative;
+                padding-left: 3 * $chevron-width;
+                width: 50%;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: $chevron-width;
+                    height: $chevron-width;
+                    background-color: $filter-color-dark;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &--type {
+                width: 20%;
+            }
+
+            &--place {
+                width: 20%;
+            }
+
+            &--year {
+                width: 10%;
+            }
+
+            + h2 {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .card-list {
+        .title-bar {
+            .filter-list {
+                display: none;
+            }
+        }
+
+        .list {
+            .list-item {
+                > div {
+                    width: 100%;
+                    padding-left: 3 * $chevron-width;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .card-list {
+        .grid {
+            .sliding-card--wrapper {
+                max-width: 100%;
+                flex: 0 0 100%;
+            }
+        }
+    }
+}

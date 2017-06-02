@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers"
+      xmlns:neos="http://typo3.org/ns/Neos/Neos/ViewHelpers">
+<f:section name="Main">
+    <div class="sliding-card--wrapper">
+        <div class="sliding-card">
+            <div class="sliding-card--header row">
+                <div class="sliding-card--image col-sm-6">
+                    {image -> f:format.raw()}
+                </div>
+                <div class="sliding-card--header-text col-sm-6">
+                    <neos:contentElement.editable property="name" tag="h3"/>
+                    <neos:contentElement.editable property="cardText" tag="p"/>
+                </div>
+            </div>
+            <f:if condition="{neos:rendering.inBackend()}">
+                <f:then>
+                    <div class="sliding-card--body">
+                        <neos:contentElement.editable property="bodyText" tag="p"/>
+                    </div>
+                    <div class="sliding-card--dropdown-btn">
+                        <i class="filter-icon-angle-up"></i>
+                    </div>
+                </f:then>
+                <f:else>
+                    <div class="sliding-card--body d-none">
+                        <neos:contentElement.editable property="bodyText" tag="p"/>
+                    </div>
+                    <div class="sliding-card--dropdown-btn">
+                        <i class="filter-icon-angle-down"></i>
+                    </div>
+                </f:else>
+            </f:if>
+        </div>
+    </div>
+</f:section>
+</html>
