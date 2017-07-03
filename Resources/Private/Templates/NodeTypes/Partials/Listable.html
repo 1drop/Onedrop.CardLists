@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:neoscr="Neos\ContentRepository\ViewHelpers"
+      xmlns:f="http://typo3.org/ns/TYPO3Fluid/Fluid/ViewHelpers"
+      xmlns:fs="Neos\Fusion\ViewHelpers">
+<f:section name="Main">
+    <f:if condition="{collection}">
+        <f:if condition="{paginationEnabled}">
+            <f:then>
+                <f:if condition="{pagination}">
+                    <neoscr:widget.paginate nodes="{collection}"
+                                            as="paginatedItems"
+                                            widgetId="listable-paginate"
+                                            configuration="{pagination}">
+                        <div class="row">
+                            <f:for each="{paginatedItems}" as="item" iteration="iterator">
+                                <div {f:if(condition: itemClass, then:'class="{itemClass}"')}>
+                                <fs:render path="itemRenderer" context="{node: item, iterator: iterator}"/>
+                        </div>
+                        </f:for>
+                        </div>
+                    </neoscr:widget.paginate>
+                </f:if>
+            </f:then>
+            <f:else>
+                <div class="row">
+                    <f:for each="{collection}" as="item" iteration="iterator">
+                        <div class="{itemClass}">
+                            <fs:render path="itemRenderer" context="{node: item, iterator: iterator}"/>
+                        </div>
+                    </f:for>
+                </div>
+            </f:else>
+        </f:if>
+    </f:if>
+</f:section>

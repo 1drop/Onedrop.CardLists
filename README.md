@@ -181,6 +181,21 @@ The steps for creating a filterable card list are similar to the ones for creati
 
 The package contains an example implementation of the filterable card list (`Onedrop.CardLists:ExampleFilterableList`).
 
+## Page Lists
+
+It is possible to list pages using the Onedrop.CardLists Plugin. You can build a page list like this:
+* Create a List NodeType and a Card NodeType as described above, but set the supertype of the List to `Onedrop.CardLists:PageList` or `Onedrop.CardLists:FilterablePageList`.
+* Create a page NodeType which inherits from `Onedrop.CardLists:Page` or `Onedrop.CardLists:FilterablePage`.
+* In the fusion for the List, set the template path to `resource://Onedrop.CardLists/Private/Templates/NodeTypes/PageList.html` or `resource://Onedrop.CardLists/Private/Templates/NodeTypes/FilterablePageList.html`, or, if you want to create your own template, set the partial path to `resource://Onedrop.CardLists/Private/Templates/NodeTypes/Partials`, so that you can use our extension of the Flowpack.Listable:Listable template in your template.
+* In the fusion file for the list, let NEOS know that the list elements should be cards. You do this by adding a block of code to the bottom of the file which looks something like this:
+    ```
+    prototype(My.Site:ListablePageShort) < prototype(My.Site:Card) {
+        link = Neos.Neos:NodeUri {
+            node = ${node}
+        }
+    }
+    ```
+
 ## Sliding Cards
 
 This package also contains JS and CSS for the dropdown-cards used on the [DP Architekten](https://www.dparchitekten.com/projekte.html) website. To use these, adjust your card template in the following way:

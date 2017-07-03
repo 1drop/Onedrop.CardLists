@@ -1,0 +1,4 @@
+'Onedrop.CardLists:PageList':
+  abstract: true
+  superTypes:
+    'Onedrop.CardLists:List': true
