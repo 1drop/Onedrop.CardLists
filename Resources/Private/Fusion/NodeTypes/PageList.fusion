@@ -14,4 +14,6 @@ prototype(Onedrop.CardLists:PageList) < prototype(Flowpack.Listable:Listable) {
             nodeType = 'NodeType_Onedrop.CardLists:Page'
         }
     }
+
+    listTitle = ${Translation.translate('exampleListTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
 }

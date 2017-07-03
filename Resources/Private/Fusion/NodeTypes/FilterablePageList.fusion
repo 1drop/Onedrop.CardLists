@@ -1,0 +1,29 @@
+prototype(Onedrop.CardLists:FilterablePageList) < prototype(Flowpack.Listable:Listable) {
+    templatePath = 'resource://Onedrop.CardLists/Private/Templates/NodeTypes/FilterablePageList.html'
+    sectionName = 'Main'
+    collection = ${q(site).find('[instanceof Onedrop.CardLists:FilterablePage]').get()}
+
+    @context.itemClass = 'col-md-6'
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            nodeType = 'NodeType_Onedrop.CardLists:FilterablePage'
+        }
+    }
+
+    categories = Neos.Neos:ContentCollection {
+        nodePath = 'categories'
+    }
+
+    groups = Neos.Neos:ContentCollection {
+        nodePath = 'groups'
+    }
+
+    listTitle = ${Translation.translate('exampleListTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
+    categoryTitle = ${Translation.translate('categoryTitle', null, [], 'Templates/List', 'Onedrop.CardLists')}
+    removeFilter = ${Translation.translate('removeFilter', null, [], 'Templates/List', 'Onedrop.CardLists')}
+}

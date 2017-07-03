@@ -2,8 +2,6 @@
   abstract: true
   superTypes:
     'Onedrop.CardLists:List': true
-  ui:
-    label: i18n
   childNodes:
     categories:
       type: 'Neos.Neos:ContentCollection'
