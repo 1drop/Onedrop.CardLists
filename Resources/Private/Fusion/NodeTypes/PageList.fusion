@@ -1,0 +1,17 @@
+prototype(Onedrop.CardLists:PageList) < prototype(Flowpack.Listable:Listable) {
+    templatePath = 'resource://Onedrop.CardLists/Private/Templates/NodeTypes/PageList.html'
+    sectionName = 'Main'
+    collection = ${q(site).find('[instanceof Onedrop.CardLists:Page]').get()}
+
+    @context.itemClass = 'col-md-6'
+
+    @cache {
+        mode = 'cached'
+        entryIdentifier {
+            node = ${node}
+        }
+        entryTags {
+            nodeType = 'NodeType_Onedrop.CardLists:Page'
+        }
+    }
+}

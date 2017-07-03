@@ -1,0 +1,36 @@
+---
+'Onedrop.CardLists:Page':
+  abstract: true
+  superTypes:
+    'Neos.NodeTypes:Page': true
+    'Flowpack.Listable:ListableMixin': true
+    'Neos.NodeTypes:ImageMixin': true
+  childNodes:
+    main:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Neos.NodeTypes:Headline': true
+          'Neos.NodeTypes:Text': true
+  ui:
+    inlineEditable: true
+  properties:
+    title:
+      type: string
+      defaultValue: ''
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Title'
+    image:
+      ui:
+        inspector:
+          editorOptions:
+            features:
+              crop: true
+            crop:
+              aspectRatio:
+                locked:
+                  width: 3
+                  height: 2

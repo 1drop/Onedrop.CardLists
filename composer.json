@@ -3,7 +3,8 @@
     "type": "neos-package",
     "name": "onedrop/cardlists",
     "require": {
-        "neos/flow": "*"
+        "neos/flow": "*",
+        "flowpack/listable": "^2.0"
     },
     "autoload": {
         "psr-4": {
