@@ -96,9 +96,10 @@
     }
 
     function createListItem(node) {
-        let newListItem = document.createElement('div');
+        let newListItem = document.createElement('a');
         newListItem.id = 'list-' + node.id;
         newListItem.classList = 'list-item';
+        newListItem.href = node.link;
         listPropertyKeys.forEach(function (key) {
             newListItem.appendChild(createListItemProperty(node, key));
         });
