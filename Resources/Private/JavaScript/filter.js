@@ -88,21 +88,32 @@
         return groups;
     }
 
-    function createListItemProperty(node, key) {
-        let property = document.createElement('div');
-        property.innerHTML = node[key];
-        property.classList = 'list-item--' + key;
-        return property;
+    function createListItemProperties(node, listItem) {
+        listPropertyKeys.forEach(function (key) {
+            let property = document.createElement('div');
+            property.innerHTML = node[key];
+            property.classList = 'list-item--' + key;
+            listItem.appendChild(property);
+        });
+    }
+
+    function createListItemLink(node, listItem) {
+        let link = document.createElement('a');
+        link.href = node.link;
+        link.classList = 'list-item--link';
+        createListItemProperties(node, link);
+        listItem.appendChild(link);
     }
 
     function createListItem(node) {
-        let newListItem = document.createElement('a');
+        let newListItem = document.createElement('li');
         newListItem.id = 'list-' + node.id;
         newListItem.classList = 'list-item';
-        newListItem.href = node.link;
-        listPropertyKeys.forEach(function (key) {
-            newListItem.appendChild(createListItemProperty(node, key));
-        });
+        if (node.link) {
+            createListItemLink(node, newListItem);
+        } else {
+            createListItemProperties(node, newListItem);
+        }
         return newListItem;
     }
 
