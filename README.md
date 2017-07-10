@@ -133,6 +133,9 @@ The steps for creating a filterable card list are similar to the ones for creati
             group = ${q(q(listItem).property('group')).property('name')}
             category = ${q(q(listItem).property('category')).property('name')}
             property = ${q(listItem).property('property')}
+            link = Neos.Neos:NodeUri {
+                node = ${listItem}
+            }
         }
         @process.json = ${Json.stringify(value)}
     }
