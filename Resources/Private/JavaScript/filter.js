@@ -130,10 +130,13 @@
     }
 
     function initList() {
-        let groups = getNodesByGroup();
-        groups.forEach(addGroupToHTML);
+        let list = document.getElementById('list-view');
+        if(list) {
+            let groups = getNodesByGroup();
+            groups.forEach(addGroupToHTML);
+        }
     }
-
+    
 
     // Function for initializing the list of nodes
 
