@@ -2,3 +2,10 @@
   abstract: true
   superTypes:
     'Onedrop.CardLists:FilterableList': true
+  ui:
+    inspector:
+      groups:
+        listing:
+          label: i18n
+          icon: 'icon-list'
+          position: 20

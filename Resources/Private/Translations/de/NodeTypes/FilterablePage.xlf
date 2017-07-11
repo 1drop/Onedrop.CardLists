@@ -2,6 +2,9 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
     <file original="" product-name="Onedrop.CardLists" source-language="en" datatype="plaintext">
         <body>
+            <trans-unit id="groups.listing" xml:space="preserve">
+                <source>Auflistung</source>
+            </trans-unit>
             <trans-unit id="properties.group" xml:space="preserve">
                 <source>Gruppe</source>
             </trans-unit>
