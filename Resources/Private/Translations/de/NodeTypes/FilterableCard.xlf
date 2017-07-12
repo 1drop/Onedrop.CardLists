@@ -7,6 +7,7 @@
             </trans-unit>
             <trans-unit id="properties.category" xml:space="preserve">
                 <source>Kategorie</source>
+            </trans-unit>
             <trans-unit id="properties.group" xml:space="preserve">
                 <source>Gruppe</source>
             </trans-unit>
